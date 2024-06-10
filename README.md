@@ -65,4 +65,4 @@ La paire mockito-core et junit m'apportent une série d'avantages pour l'écritu
 
 Il existe d'autres packages que j'ai utilisés et dont le détail est donné dans les commentaires du code.
 
-
+Ce projet montre comment utiliser les acquis du module de programmation orientée objet pour développer un programme Java complet. Les perspectives d'amélioration incluent l'optimisation des performances, l'ajout de nouvelles fonctionnalités (chiffrement des données échangées entre le code java et la base données) et l'amélioration de la portabilité.
