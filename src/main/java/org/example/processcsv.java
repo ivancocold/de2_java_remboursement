@@ -62,6 +62,7 @@ public class processcsv
             rows.remove(0);
 
             // Insert rows into the database
+
             try (Connection connection = DriverManager.getConnection(DB_URL, DB_USER, DB_PASSWORD))
             {
                 for (String[] row : rows)
@@ -70,6 +71,7 @@ public class processcsv
                     upsertRow(connection, header, row, timestamp);
                 }
             }
+
         }
         // Déplacer le fichier après traitement
         removefile.moveFile(file, ARCHIVE_DIRECTORY);
