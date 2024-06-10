@@ -18,8 +18,8 @@ Après avoir géré un fichier, le programme le déplace pour l'archiver dans un
 1. connectiontodatabase : elle gère les objets et les méthodes liés à la connexion entre le programme et la base de données.
 2. processcsv : gère les méthodes et objets permettant de parser un dossier à la recherche d'un fichier de notre choix et d'en extraire les données nécessaires.
 3. removefile : permet de déplacer le fichier qui vient d'être géré.
-4. main : permet de lancer et exécuter le programme.c
-5. test : implémente les tests unitaires avec JUnit.
+4. main : permet de lancer et exécuter le programme en faisant intéragir les différentes classes. Elle lance notamment la recherche des fichiers à traiter dans un dossier spécifié. Elle applique aux fichiers d'intérêt différentes méthodes développées dans les différentes autres classes.
+5. test : implémente les tests unitaires avec les framework JUnit et Mockito.
 
 ## Variables à actualiser
 La portabilité de ce projet est assurée par l'usage de variables de configuration. Classe par classe, nous retrouvons les variables suivantes:

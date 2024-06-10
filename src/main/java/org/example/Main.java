@@ -16,20 +16,35 @@ public class Main
     private static final Logger logger = LoggerFactory.getLogger(Main.class);
     public static void main(String[] args)
     {
+        //Définition du répertoire de recherche
         File folder = new File(DIRECTORY_PATH);
+        /*
+        Tous les fichiers dont le nom répond aux critères de recherche spécifiés dans le regex sont stockés dans une liste.
+         */
         File[] files = folder.listFiles((dir, name) -> name.matches(".*\\d{14}\\.csv"));
 
-        if (files != null) {
+        //Cas où un fichier répond aux attentes
+        if (files != null)
+        {
+            //Pour chaque fichier
             for (File file : files)
             {
+                //Annonce de son traitement pas affichage
                 System.out.println("Processing file: " + file.getName());
+                //Début du traitement
                 try
                     {
+                        //Application de la méthode processCSVFile de la classe processcsv
                         processCsvFile(file);
                     }
+                //Gestion des erreurs
                 catch (IOException | CsvException | SQLException e)
                     {
-                    //e.printStackTrace();
+                    /*
+                    La gestion des erreurs aurait pu se faire avec la ligne de code suivante.
+                    e.printStackTrace();
+                    Néanmoins, j'ai opté pour une gestion des erreurs robustes avec slf4j
+                     */
                     logger.error("Une erreur s'est produite lors du traitement du fichier", e);
                     }
             }
