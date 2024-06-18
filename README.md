@@ -6,8 +6,17 @@ Ce projet a été réalisé dans le cadre du module de programmation orientée o
 - mettre en place une programme qui exécute des requêtes sur une base de données relationnelles.
 - implémenter des tests unitaires avec JUnit
 
-## Description du programme
 
+## Installation du projet depuit github
+Pour cloner ce projet, exécutez la ligne de commande suivante
+```
+git clone https://github.com/ivancocold/de2_java_remboursement
+```
+
+Le scipt sql permet de créer la base de données sur MySQL.
+
+
+## Description du programme
 Le programme parcourt un dossier donné et recherche les fichiers csv nommés sous un format spécifié ("users_<YYYYMMDDHHmmSS>.csv").
 Il parse ce fichier à la recherche des colonnes dont l'en-tête est au format <Numero_Securite_Sociale>, <Nom>, <Prenom>, <Date_Naissance>, <Numero_Telephone>, <E_Mail>, <ID_Remboursement>, <Code_Soin>, <Montant_Remboursement>.
 Il insère les lignes de ce fichier dans une base de données MySQL si l'ID_remboursement n'y était pas déjà présent, si non il actualise les lignes dont l'ID est déjà renseigné.
